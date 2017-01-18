@@ -13,7 +13,7 @@ import time
 LAST_UPDATE_ID = None
 
 def creartxt():
-    archi=open('/home/ubuntu/workspace/python-telegram-bot/examples/jamoncitos.log','w')
+    archi=open('/path/log','w')
     archi.close()
 
 def main():
@@ -23,7 +23,7 @@ def main():
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
     # Telegram Bot Authorization Token
-    bot = telegram.Bot('126383427:AAEcuKHDJvMGNRkuVAI5h509GWSfuvdrWD8')
+    bot = telegram.Bot('tu_Api')
     try:
         LAST_UPDATE_ID = bot.getUpdates()[-1].update_id
     except IndexError:
@@ -44,7 +44,7 @@ def echo(bot):
         msj=message+str(nro)
         
         def grabartxt():
-            archi=open('/home/ubuntu/workspace/python-telegram-bot/examples/jamoncitos.log','w')
+            archi=open('/path/log','w')
             archi.write(time.ctime()+' - '+message+'\n')
             archi.close()
 
